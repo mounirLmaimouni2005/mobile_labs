@@ -1,24 +1,20 @@
-# Mon profil
+# Mon  profil
+Bonjour , je suit mounir maimouni une etuduant en devloppment web  
 
-Bonjour, je suis khadija gerrouj une étudiante en développement web.
+# Mes competences 
+ - html
+ - css 
+ - javascript
+ - php
+ - react
 
-## Mes compétences
+ # Mon objectif 
+ ### Devenir a full stack devlopper
+  J'aime apprendre de nouvelles technologies.
 
-- HTML
-- CSS
-- JavaScript
-- PHP
+# Mon site prefere
 
-## Mon objectif
-
-**Devenir une développeuse web professionnelle.**
-
-J'aime apprendre *de nouvelles technologies*.
-
-## Mon site préféré
-
-[GitHub](https://github.com/khadijagerrouj/)
-
-> Apprendre chaque jour pour progresser.
-
----
+[Github](github.com)
+ 
+ Apprendre chaque jour pour progresser .
+ 
