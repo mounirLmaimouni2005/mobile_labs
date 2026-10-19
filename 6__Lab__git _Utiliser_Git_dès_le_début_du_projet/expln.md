@@ -1,9 +1,14 @@
+---
+marp: true
+---
 
 # Lab 01 — Initialiser un dépôt Git et le connecter à GitHub
 
 ## 1. Objectif
 
 L'objectif de ce Lab est d'initialiser un dépôt Git, de vérifier l'état des fichiers, d'ajouter les premiers fichiers, de créer des commits et de publier le projet sur GitHub.
+
+---
 
 ## 2. Vérifier l'état du dépôt
 
@@ -14,6 +19,8 @@ Cette commande permet de vérifier l'état du dépôt et de connaître les fichi
 ```bash
 git status
 ```
+
+---
 
 ## 3. Initialiser un dépôt Git
 
@@ -26,6 +33,8 @@ git init
 ```
 
 **Remarque :** si le projet appartient déjà à un dépôt Git existant, il n'est généralement pas nécessaire d'exécuter cette commande une deuxième fois.
+
+---
 
 ## 4. Ajouter les fichiers
 
@@ -51,6 +60,8 @@ git add index.html
 git add index.html style.css expln.md
 ```
 
+---
+
 ## 5. Vérifier les fichiers ajoutés
 
 Après avoir ajouté les fichiers, on vérifie leur état.
@@ -62,6 +73,8 @@ git status
 Les fichiers ajoutés apparaissent généralement dans la section `Changes to be committed`.
 
 Cela signifie qu'ils sont prêts à être enregistrés dans un commit.
+
+---
 
 ## 6. Créer un commit
 
@@ -75,6 +88,8 @@ git commit -m "Initial commit"
 
 Un commit représente un point de sauvegarde dans l'historique du projet.
 
+---
+
 ## 7. Consulter l'historique et les modifications
 
 ### Consulter l'historique
@@ -85,6 +100,7 @@ La commande `git log --oneline` affiche l'historique des commits sous une forme 
 git log --oneline
 ```
 
+---
 
 ## 8. Connecter le dépôt local à GitHub
 
@@ -132,6 +148,8 @@ git push -u origin main
 
 Cette commande envoie les commits locaux vers la branche `main` du repository distant et configure le suivi entre les deux branches.
 
+---
+
 ## 9. Gérer les branches
 
 ### Afficher les branches locales
@@ -174,6 +192,8 @@ git switch main
 
 Cette commande permet de revenir à la branche `main`.
 
+---
+
 ## 10. Synchroniser le projet avec GitHub
 
 ### Récupérer les modifications distantes
@@ -206,6 +226,8 @@ git clone https://github.com/USERNAME/REPOSITORY.git
 
 Cette commande copie un repository distant sur l'ordinateur local.
 
+---
+
 ## 11. Consulter une version précédente
 
 ### Consulter l'historique des commits
@@ -233,6 +255,8 @@ git switch main
 ```
 
 **Remarque :** consulter un ancien commit avec `git checkout` place le dépôt en mode `detached HEAD`. Pour reprendre le travail habituel, revenir à une branche.
+
+---
 
 ## 12. Workflow récapitulatif
 
@@ -264,6 +288,8 @@ git add .
 git commit -m "Description des modifications"
 git push
 ```
+
+---
 
 ## 13. Conclusion
 
