@@ -64,7 +64,7 @@ style: |
 
 Supervised by Fouad Serraj
 
-Solicode · [Date of now]
+Solicode · [22/10/2026]
 
 <!--
 Speaker notes: Introduce this beginner lab as a practical guide to Markdown syntax. The presentation demonstrates the requested document elements and explains what to check when their source is rendered by a Markdown viewer.
@@ -209,7 +209,7 @@ Speaker notes: Consistent spacing and correctly paired syntax markers make Markd
 
 <!-- _class: lead -->
 
-# Questions?
+# Thanks
 
 <!--
 Speaker notes: Invite questions about how the Markdown source maps to its rendered result. Ask learners to choose one document element from the lab and describe where they would use it in a README or set of notes.
