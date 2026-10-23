@@ -216,7 +216,7 @@ Return **one complete Marp Markdown presentation and nothing else**: no introduc
 - 8 to 10 slides total, following the 7 fixed + 1 to 3 core formula.
 - All text and notes in English.
 - Title slide shows Mounir L Maimouni, Supervised by Fouad Serraj, Solicode, and the real generation date (no placeholder, not hardcoded); slide 2 is titled "Plan".
-- Final slide is titled exactly "Thank You" with no Q&A wording and no slide after it.
+- Final slide is titled exactly "Thanks" with no Q&A wording and no slide after it.
 - Every explicit lab requirement is covered; no technology, example, or requirement beyond the lab statement was added.
 - Practical slides show Goal, code, Expected result.
 - Code is valid and consistent; nothing falsely claimed as executed or submitted.

@@ -207,7 +207,7 @@ Speaker notes: These takeaways recap the features practiced in the lab. Check th
 ---
 <!-- _class: lead -->
 
-# Thank You
+# Thanks
 
 <!--
 Speaker notes: This final slide closes the presentation. The deck has introduced the requested Markdown structures and Marp settings for a clear, organized set of slides.
