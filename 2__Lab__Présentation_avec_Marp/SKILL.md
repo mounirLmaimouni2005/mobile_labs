@@ -46,11 +46,17 @@ Every deck has **7 fixed slides + 1 to 3 core slides = 8 to 10 slides**.
 | 1 | Title | Lab title, `Mounir L Maimouni`, `Supervised by Fouad Serraj`, `Solicode`, current date from 3b (class `lead`) |
 | 2 | Plan | Slide title is exactly "Plan"; 4 to 5 topics matching the deck |
 | 3 | Objectives | 3 to 5 outcomes starting with "By the end, I can..." |
-| 4 | Introduction | What the lab's tool or concept is and why it matters, using only the lab's own subject |
+| 4 | Introduction, Problem and Solution | Three short labelled parts: **Introduction** (what the lab's tool or concept is), **Problem** (the need or difficulty it addresses), **Solution** (how the lab's tool or technique answers it); see rules below |
 | 5 to 7 | **Core slides (1 to 3)** | Concepts + practical demos, basic to advanced |
 | next | Deliverable and Submission | Expected files and submission steps, only as the statement says |
 | next | Takeaways and Common Mistakes | 3 takeaways, 2 or 3 beginner mistakes with fixes, limited to concepts covered in the lab |
 | last | Thank You | Slide title is exactly "Thank You"; at most one short closing line (class `lead`); no "Questions" or "Q&A" wording; no slide after it |
+
+Rules for slide 4:
+- Exactly three labelled parts, one or two short lines each (max 5 bullets in total).
+- **Problem** and **Solution** come only from the lab's stated objective and subject. Do not invent scenarios, statistics, case studies, or tools.
+- The Solution must be what the lab itself teaches or produces, not an extra technology.
+- If the statement implies no explicit problem, state the general need behind the lab's objective in one line, using the teacher's terminology.
 
 How to fit any lab:
 - **Large lab:** group related concepts on one core slide; prioritize explicit requirements. Max 3 core slides.
@@ -216,7 +222,8 @@ Return **one complete Marp Markdown presentation and nothing else**: no introduc
 - 8 to 10 slides total, following the 7 fixed + 1 to 3 core formula.
 - All text and notes in English.
 - Title slide shows Mounir L Maimouni, Supervised by Fouad Serraj, Solicode, and the real generation date (no placeholder, not hardcoded); slide 2 is titled "Plan".
-- Final slide is titled exactly "Thanks" with no Q&A wording and no slide after it.
+- Final slide is titled exactly "Thank You" with no Q&A wording and no slide after it.
+- Slide 4 contains Introduction, Problem, and Solution, all derived from the lab statement only.
 - Every explicit lab requirement is covered; no technology, example, or requirement beyond the lab statement was added.
 - Practical slides show Goal, code, Expected result.
 - Code is valid and consistent; nothing falsely claimed as executed or submitted.

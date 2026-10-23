@@ -64,80 +64,61 @@ Supervised by Fouad Serraj
 Solicode · October 23, 2026
 
 <!--
-Speaker notes: This presentation introduces Marp and the Markdown features used to build a structured slide deck. We will look at headings, lists, slide separators, images, and themes, then prepare the Markdown deliverable for the GitHub repository.
+Speaker notes: This lab explores Marp presentations written in Markdown. We will use headings, lists, images, themes, and slide separators to organize presentation content clearly.
 -->
 
 ---
 
 # Plan
 
-- Understand Marp and Markdown slides
+- Discover Marp and Markdown slides
 - Organize content with headings and lists
 - Separate content into slides
-- Add images and select a theme
-- Prepare the GitHub deliverable
+- Add images and select themes
+- Review the presentation deliverable
 
 <!--
-Speaker notes: The plan follows the requested lab topics from basic structure to visual choices. The final step covers the source-file deliverable and depositing it in the GitHub repository.
+Speaker notes: The plan follows the requested topics in the order they help build a deck. First we structure the text, then divide it into slides and apply the visual features named in the lab.
 -->
 
 ---
 
 # Objectives
 
-- By the end, I can explain how Marp uses Markdown.
+- By the end, I can explain what Marp does.
 - By the end, I can format headings and lists.
 - By the end, I can separate content into slides.
-- By the end, I can add an image and choose a theme.
+- By the end, I can add images and select themes.
 
 <!--
-Speaker notes: These objectives describe the skills practiced in this presentation. Each one corresponds to a requested Markdown or Marp feature, so learners can use the examples to check their understanding.
+Speaker notes: These objectives describe the skills named in the lab statement. The examples on the next slides show the Markdown syntax for each feature and how it contributes to an organized presentation.
 -->
 
 ---
 
-# Introduction to Marp
+# Introduction, Problem and Solution
 
-Marp turns Markdown content into a slide presentation.
+**Introduction:** Marp creates presentations from Markdown files.
 
-- Markdown holds the slide text and structure.
-- Marp settings control presentation options.
-- A concise structure helps the audience follow ideas.
+**Problem:** Presentation content needs clear structure across slides.
+
+**Solution:** Use headings, lists, images, themes, and separators in Markdown.
 
 <!--
-Speaker notes: Marp lets authors write presentation content as Markdown rather than manually formatting every text element. Headings, lists, and slide separators provide the structure, while presentation settings configure the deck.
+Speaker notes: The lab focuses on creating a structured presentation from a Markdown source. These Markdown features organize the content into slides and provide the visual elements requested, without requiring a separate content format.
 -->
 
 ---
 
-# Format Text with Markdown
+# Structure Text and Slides
 
-**Goal:** Organize a slide with headings and lists.
+**Goal:** Organize ideas and divide them into slides.
 
 ````markdown
 # Main idea
 ## Supporting point
-
 - First detail
 - Second detail
-  - Related detail
-````
-
-**Expected result:** A title hierarchy and a readable list.
-
-<!--
-Speaker notes: A single hash marks the main heading, and two hashes mark a supporting heading. Hyphens create list items, while indentation groups a related detail under its parent item.
--->
-
----
-
-# Build the Slide Sequence
-
-**Goal:** Separate ideas into individual slides.
-
-````markdown
-# First idea
-Its supporting detail
 
 ---
 
@@ -145,17 +126,17 @@ Its supporting detail
 Its supporting detail
 ````
 
-**Expected result:** Two slides, each beginning with its own heading.
+**Expected result:** Two slides with headings and a list.
 
 <!--
-Speaker notes: A line containing three hyphens separates one slide from the next. Keep each separator on its own line, and place it where the next idea should begin.
+Speaker notes: Hash marks create headings, while hyphens create list items. A line with three hyphens separates slides, so keep it on a line by itself between the content for each slide.
 -->
 
 ---
 
-# Add Images and Choose a Theme
+# Add Images and Themes
 
-**Goal:** Include an image and set the deck theme.
+**Goal:** Include an image and choose a theme.
 
 ````markdown
 ---
@@ -163,52 +144,47 @@ marp: true
 theme: default
 ---
 
-![Description](<relative image path>)
+![Description](IMAGE_PATH)
 ````
 
-**Expected result:** Marp uses the selected theme and places the referenced image.
+**Expected result:** Marp uses the selected theme and references the image.
 
 <!--
-Speaker notes: The theme setting selects the presentation style, and the image syntax includes descriptive alternative text plus a relative image path. Replace the path with the location of the image used for the presentation.
+Speaker notes: The theme is set in the Marp front matter. Replace IMAGE_PATH with the path to the image being used, and replace the alternative text with a short description of that image.
 -->
 
 ---
 
-# Deliverable and Submission
+# Deliverable
 
-- Save the presentation as `lab-presentation.md`.
-- Add the Markdown file to the Git repository.
-- Commit the change and push it to GitHub.
-
-```bash
-git add lab-presentation.md
-git commit -m "Add Marp lab presentation"
-git push
-```
+- A structured presentation created from Markdown
+- Headings and lists to organize content
+- Images and themes for visual structure
+- Separators to divide the slides
 
 <!--
-Speaker notes: The requested deliverable is a presentation created from Markdown and deposited in the GitHub repository. These commands add and publish the source file; run them from the lab directory in the existing repository.
+Speaker notes: The lab asks for a professional presentation that demonstrates the listed features. It does not specify a filename, export format, submission destination, or submission steps, so none are assumed here.
 -->
 
 ---
 
 # Takeaways and Common Mistakes
 
-- Headings and lists organize slide content.
-- Separators mark the start of another slide.
-- Images and themes add visual structure.
-- Mistake: placing a separator mid-line; put it on its own line.
-- Mistake: using the wrong image path; check its relative location.
+- Headings and lists organize the slide content.
+- Separators mark where the next slide begins.
+- Images and themes contribute to presentation structure.
+- Mistake: placing a separator within a text line; put it alone.
+- Mistake: leaving IMAGE_PATH unchanged; replace it with the image path.
 
 <!--
-Speaker notes: These takeaways recap the features practiced in the lab. Check that separators stand alone and that the image path points to the intended file before considering the Markdown deck complete.
+Speaker notes: Check the structure by reviewing the heading hierarchy, list items, and slide boundaries. Also replace the image-path token with the path to the image used in the presentation.
 -->
 
 ---
 <!-- _class: lead -->
 
-# Thanks
+# Thank You
 
 <!--
-Speaker notes: This final slide closes the presentation. The deck has introduced the requested Markdown structures and Marp settings for a clear, organized set of slides.
+Speaker notes: This final slide closes the presentation. The deck has covered the Markdown and Marp features requested for creating a structured presentation.
 -->
