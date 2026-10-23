@@ -1,0 +1,37 @@
+
+{
+    "workbench.colorTheme": "Dark Modern",
+    "php.validate.executablePath": "C:/Users/Solicode/PHP8/php.exe",
+    "phpserver.phpPath": "C:/Users/Solicode/PHP8/php.exe",
+    "files.autoSave": "afterDelay",
+    "sqltools.useNodeRuntime": "C:\\Program Files\\nodejs\\node.exe",
+    "mermaidViewer.useVSCodeTheme": false,
+    "mermaidViewer.theme": "dark",
+    "window.menuBarVisibility": "compact",
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.compactFolders": false,
+    "material-icon-theme.files.color": "#42a5f5",
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "php": false
+    },
+    "gitlens.graph.details.location": "auto",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "path-intellisense.mappings": {},
+    "javascript.validate.enable": true,
+    "editor.renderValidationDecorations": "on",
+    "errorLens.enabled": true,
+    "errorLens.respectUpstreamEnabled": false,
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning",
+        "info"
+    ],
+    "errorLens.messageEnabled": true,
+    "errorLens.gutterIconsEnabled": true
+}
+
