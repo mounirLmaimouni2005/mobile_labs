@@ -57,65 +57,62 @@ style: |
 ---
 <!-- _class: lead -->
 
-# Presentations with Marp
+# Creating Presentations with Marp
 
 Mounir L Maimouni  
 Supervised by Fouad Serraj  
-Solicode · [23/10/2026]
+Solicode · October 23, 2026
 
 <!--
-Speaker notes: This lab introduces Marp, a way to turn Markdown files into slide decks. The goal is to build a clear presentation using familiar text syntax, then keep the Markdown source ready for submission.
+Speaker notes: This presentation introduces Marp and the Markdown features used to build a structured slide deck. We will look at headings, lists, slide separators, images, and themes, then prepare the Markdown deliverable for the GitHub repository.
 -->
 
 ---
 
 # Plan
 
-- Meet Marp and its workflow
-- Structure content with headings and lists
+- Understand Marp and Markdown slides
+- Organize content with headings and lists
 - Separate content into slides
-- Add images and choose a theme
-- Export and submit the source
+- Add images and select a theme
+- Prepare the GitHub deliverable
 
 <!--
-Speaker notes: We will move from the purpose of Marp to the Markdown features used in a deck. Then we will connect those features to a finished source file and the GitHub submission requested by the lab.
+Speaker notes: The plan follows the requested lab topics from basic structure to visual choices. The final step covers the source-file deliverable and depositing it in the GitHub repository.
 -->
 
 ---
 
 # Objectives
 
-- By the end, I can explain what Marp does.
-- By the end, I can format titles and lists.
-- By the end, I can split Markdown into slides.
-- By the end, I can add an image and select a theme.
-- By the end, I can prepare the source for GitHub.
+- By the end, I can explain how Marp uses Markdown.
+- By the end, I can format headings and lists.
+- By the end, I can separate content into slides.
+- By the end, I can add an image and choose a theme.
 
 <!--
-Speaker notes: These outcomes describe the practical skills to demonstrate. The deliverable is the Markdown source; a rendered deck is the expected visual result, not a claim that it has already been exported.
+Speaker notes: These objectives describe the skills practiced in this presentation. Each one corresponds to a requested Markdown or Marp feature, so learners can use the examples to check their understanding.
 -->
 
 ---
 
 # Introduction to Marp
 
-Marp converts Markdown into slide presentations.
+Marp turns Markdown content into a slide presentation.
 
-- Write content as plain text with Markdown
-- Add Marp settings in YAML front matter
-- Preview slides before exporting
-
-**Use case:** turn a lesson outline into a shareable presentation.
+- Markdown holds the slide text and structure.
+- Marp settings control presentation options.
+- A concise structure helps the audience follow ideas.
 
 <!--
-Speaker notes: Markdown keeps the content readable and easy to edit, while Marp interprets slide separators and presentation settings. This is useful when lesson content changes often and should remain maintainable as text.
+Speaker notes: Marp lets authors write presentation content as Markdown rather than manually formatting every text element. Headings, lists, and slide separators provide the structure, while presentation settings configure the deck.
 -->
 
 ---
 
-# Structure with Markdown
+# Format Text with Markdown
 
-**Goal:** Make slide content easy to scan.
+**Goal:** Organize a slide with headings and lists.
 
 ````markdown
 # Main idea
@@ -126,39 +123,39 @@ Speaker notes: Markdown keeps the content readable and easy to edit, while Marp 
   - Related detail
 ````
 
-**Expected result:** A clear title hierarchy and readable nested list.
+**Expected result:** A title hierarchy and a readable list.
 
 <!--
-Speaker notes: Use one level-one heading as the slide title, then use smaller headings only when they add structure. Lists are most effective when each item expresses one concise idea rather than a full paragraph.
+Speaker notes: A single hash marks the main heading, and two hashes mark a supporting heading. Hyphens create list items, while indentation groups a related detail under its parent item.
 -->
 
 ---
 
-# Separate the Slides
+# Build the Slide Sequence
 
-**Goal:** Start each new slide at a deliberate point.
+**Goal:** Separate ideas into individual slides.
 
 ````markdown
-# First slide
-Opening idea
+# First idea
+Its supporting detail
 
 ---
 
-# Second slide
-Next idea
+# Next idea
+Its supporting detail
 ````
 
-**Expected result:** Two slides; the separator stands alone on its line.
+**Expected result:** Two slides, each beginning with its own heading.
 
 <!--
-Speaker notes: In the presentation body, a line containing three hyphens separates slides. The opening YAML front matter also uses delimiter lines, but that configuration block appears only once at the top of the file.
+Speaker notes: A line containing three hyphens separates one slide from the next. Keep each separator on its own line, and place it where the next idea should begin.
 -->
 
 ---
 
-# Add Images and Themes
+# Add Images and Choose a Theme
 
-**Goal:** Add a visual and choose a presentation style.
+**Goal:** Include an image and set the deck theme.
 
 ````markdown
 ---
@@ -166,55 +163,52 @@ marp: true
 theme: default
 ---
 
-![Descriptive alt text](<relative-image-path>)
+![Description](<relative image path>)
 ````
 
-**Expected result:** Marp applies the selected theme and displays the referenced image.
+**Expected result:** Marp uses the selected theme and places the referenced image.
 
 <!--
-Speaker notes: Replace the image-path placeholder with a relative path to an image available with the project, and write alt text that describes it. The default theme is a built-in choice; other themes can be selected when available in the Marp setup.
+Speaker notes: The theme setting selects the presentation style, and the image syntax includes descriptive alternative text plus a relative image path. Replace the path with the location of the image used for the presentation.
 -->
 
 ---
 
 # Deliverable and Submission
 
-- Save the presentation as a Marp Markdown file.
-- Preview it and check slide order and readability.
-- Add the source file to the Git repository.
-- Commit the change and push to GitHub.
+- Save the presentation as `lab-presentation.md`.
+- Add the Markdown file to the Git repository.
+- Commit the change and push it to GitHub.
 
 ```bash
 git add lab-presentation.md
-git commit -m "Add Marp presentation"
+git commit -m "Add Marp lab presentation"
 git push
 ```
 
 <!--
-Speaker notes: The lab asks for the deliverable to be deposited in the GitHub repository. These commands show the usual sequence; use the repository and branch already provided for the lab rather than assuming a destination.
+Speaker notes: The requested deliverable is a presentation created from Markdown and deposited in the GitHub repository. These commands add and publish the source file; run them from the lab directory in the existing repository.
 -->
 
 ---
 
 # Takeaways and Common Mistakes
 
-- Headings and lists make content scannable.
-- Separators define the slide sequence.
-- Images and themes add visual consistency.
-- Mistake: putting `---` inside a sentence; use its own line.
-- Mistake: using an unavailable image path; check the relative path.
+- Headings and lists organize slide content.
+- Separators mark the start of another slide.
+- Images and themes add visual structure.
+- Mistake: placing a separator mid-line; put it on its own line.
+- Mistake: using the wrong image path; check its relative location.
 
 <!--
-Speaker notes: A successful deck combines concise content with reliable structure. Before submitting, check that each separator is intentional and that every referenced image exists where the Markdown file expects it.
+Speaker notes: These takeaways recap the features practiced in the lab. Check that separators stand alone and that the image path points to the intended file before considering the Markdown deck complete.
 -->
 
 ---
 <!-- _class: lead -->
 
-# Questions and Answers
-
-Start with one clear idea per slide.
+# Thank You
 
 <!--
-Speaker notes: Invite questions about Markdown syntax, slide structure, or visual choices. The central habit to keep is to make each slide communicate one main idea clearly.
+Speaker notes: This final slide closes the presentation. The deck has introduced the requested Markdown structures and Marp settings for a clear, organized set of slides.
 -->
