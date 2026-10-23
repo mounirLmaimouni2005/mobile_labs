@@ -1,105 +1,53 @@
 ---
 name: lab-to-marp-presentation
-description: Convert a teacher's lab statement (plain text, any language) into one concise, technically accurate, professional English Marp Markdown presentation of 8 to 10 slides. Use whenever the user provides a lab or assignment statement and asks for slides, a presentation, or a Marp deck.
+description: "Convert a technical lab or assignment statement into a clear, accurate Marp Markdown presentation. Use when asked to create or adapt presentation slides from lab instructions in any language."
 ---
 
-# Lab Statement to Marp Presentation
+# Technical Lab to Marp Presentation
 
-## 1. Role
+## Purpose
 
-Act as a senior technical instructor and presentation designer. Turn the teacher's lab statement into one finished Marp presentation that a beginner student can present confidently to a teacher and classmates.
+Turn the supplied technical lab statement into a polished, beginner-friendly presentation that teaches the lab rather than merely restating it. Work from the supplied statement only; do not inspect or request unrelated project files, code, or screenshots.
 
-The deck must explain what the lab is, which concepts are needed, how to do the practical tasks, what result to expect, and what to deliver. Teach the lab; do not merely paraphrase the statement.
+## Workflow
 
-## 2. Input
+1. Read the complete lab statement and identify its objective, audience level, technical concepts, practical tasks, tools, constraints, deliverables, and submission method.
+2. Separate explicit requirements from the minimum prerequisite concepts needed to explain them. Do not present prerequisites or assumptions as teacher requirements.
+3. Choose a slide count and level of detail that fit the lab's actual complexity. There is no fixed slide count or mandatory title/plan/closing formula.
+4. Outline the presentation so all five required sections are clearly identifiable and appear in this order:
+   1. **Introduction**
+   2. **Problématique**
+   3. **Definition**
+   4. **Solution**
+   5. **Conclusion**
+5. Explain relevant concepts before showing practical examples. Match the technical depth to the lab and explain unfamiliar terms in concise, beginner-level English.
+6. Write the complete Marp Markdown presentation, then silently check its structure, factual consistency, readability, and Marp syntax before returning or saving it.
 
-The only input is the lab statement (French, English, Darija, or other). Never ask for extra files, code, screenshots, or clarifications. If something is missing, omit it; never invent it. Only when a missing detail is essential to avoid a wrong statement, state a minimal assumption in a speaker note.
+Use these section labels as written so each section is easy to find. Keep slide text and speaker notes in concise English by default, while preserving technical syntax, names, commands, and the required **Problématique** label. If the user explicitly requests another presentation language, follow that request while retaining the section labels.
 
-Before writing, silently extract: the main objective, required concepts, practical tasks, tools, deliverable and submission method, and any stated constraints.
+## Accuracy and Scope
 
-Separate what is **required** (explicit in the statement) from **prerequisites** (the minimum needed to understand or perform a required task). Include only these two; do not add optional context. Never present an assumption as a teacher requirement.
+- Cover every explicit requirement in the lab statement and no unrelated features, tools, technologies, exercises, or deliverables.
+- Never invent requirements, implementation details, paths, credentials, people, dates, URLs, data, results, or submission destinations.
+- Make assumptions only when essential to avoid a misleading explanation; state a minimal assumption in speaker notes.
+- Do not claim that code was run, tested, submitted, or successful unless the input establishes that fact. Label predictions **Expected result** and illustrative material **Example**.
+- Keep examples small, technically valid, and consistent across slides. State OS, shell, or version conditions when they materially affect a command or result.
+- Include a deliverable or submission instruction only when the lab statement specifies one. If it does not, omit the section rather than inventing a deliverable.
+- Use official documentation links only when they are well known, directly useful, and within the lab's scope. Do not use external images unless the user explicitly asks for them.
 
-## 3. Non-Negotiable Rules
+## Required Section Guidance
 
-- **Language:** all slide text and speaker notes in English, whatever the input language. Keep commands, code, filenames, and technical terms unchanged. Switch language only if the user explicitly asks.
-- **Length:** 8 to 10 slides in total, never more.
-- **Truthfulness:** never invent names, grades, groups, teachers, dates, results, URLs, image links, file paths, or tool capabilities. Use the fixed identity and the real generation date defined in section 3b. Never use a date placeholder. Never invent any other personal detail (group, grade, ID). Never claim anything was run, tested, committed, or submitted. Label outputs **Expected result** or **Example output**.
-- **Accuracy:** keep code minimal, valid, and consistent across slides. If a command depends on OS, shell, or version, state that briefly.
-- **Scope (critical):** the teacher's lab statement defines the scope; this skill defines only how to analyze and present it. Cover every explicit requirement and add nothing else: no technologies, tools, frameworks, libraries, concepts, features, exercises, examples, deliverables, or requirements that the statement does not request. Do not expand the lab into a larger or more advanced project, and keep the teacher's terminology. Do not fabricate results, outputs, screenshots, statistics, or implementation details.
-- **Visuals:** no external images. Prefer tables, code blocks, and text diagrams. Include an official documentation URL only if it is well known and truly useful.
+- **Introduction:** establish the lab's subject, goal, and relevant context without adding unsupported background.
+- **Problématique:** state the need, question, or difficulty that the lab itself addresses. If none is explicit, frame only the general need implied by the stated objective.
+- **Definition:** explain the central terms and prerequisites needed to understand the lab. Keep definitions accurate and at the lab's level.
+- **Solution:** explain the approach or tasks required by the statement. For practical material, introduce the concept first, then show a small relevant example and its directly supported expected result.
+- **Conclusion:** summarize the main learning points and, only when specified, the completed deliverable or next submission step. Do not imply work has been completed.
 
-## 3b. Fixed Identity (always use)
+The five sections may span one or multiple slides each. Add supporting slides when they help explain required concepts or practical steps; combine material when the lab is small. Keep the five section labels clear even when a section shares a slide with related content.
 
-- **Presenter name:** always `Mounir L Maimouni`.
-- **Supervisor:** always `Fouad Serraj`, written as `Supervised by Fouad Serraj`.
-- **Institution:** `Solicode`.
-- **Date:** the actual date on which the presentation is generated, read at generation time from the current system date or another reliable available source. Never hardcode a date and never use a placeholder (`[Date]`, `DD/MM/YYYY`, `Current Date`). Format as `Month D, YYYY` (format example only: `March 5, 2026`). If the date cannot be verified, omit the date line instead of inventing one.
+## Marp and Markdown
 
-Use this exact spelling everywhere. Do not ask for these details and do not replace them with `[Your Name]`.
-
-## 4. Slide Structure (fixed formula)
-
-Every deck has **7 fixed slides + 1 to 3 core slides = 8 to 10 slides**.
-
-| # | Slide | Content |
-|---|-------|---------|
-| 1 | Title | Lab title, `Mounir L Maimouni`, `Supervised by Fouad Serraj`, `Solicode`, current date from 3b (class `lead`) |
-| 2 | Plan | Slide title is exactly "Plan"; 4 to 5 topics matching the deck |
-| 3 | Objectives | 3 to 5 outcomes starting with "By the end, I can..." |
-| 4 | Introduction, Problem and Solution | Three short labelled parts: **Introduction** (what the lab's tool or concept is), **Problem** (the need or difficulty it addresses), **Solution** (how the lab's tool or technique answers it); see rules below |
-| 5 to 7 | **Core slides (1 to 3)** | Concepts + practical demos, basic to advanced |
-| next | Deliverable and Submission | Expected files and submission steps, only as the statement says |
-| next | Takeaways and Common Mistakes | 3 takeaways, 2 or 3 beginner mistakes with fixes, limited to concepts covered in the lab |
-| last | Thank You | Slide title is exactly "Thank You"; at most one short closing line (class `lead`); no "Questions" or "Q&A" wording; no slide after it |
-
-Rules for slide 4:
-- Exactly three labelled parts, one or two short lines each (max 5 bullets in total).
-- **Problem** and **Solution** come only from the lab's stated objective and subject. Do not invent scenarios, statistics, case studies, or tools.
-- The Solution must be what the lab itself teaches or produces, not an extra technology.
-- If the statement implies no explicit problem, state the general need behind the lab's objective in one line, using the teacher's terminology.
-
-How to fit any lab:
-- **Large lab:** group related concepts on one core slide; prioritize explicit requirements. Max 3 core slides.
-- **Small lab:** use 1 core slide and, if needed, merge Plan and Objectives into one slide (total 8 or fewer fixed slides).
-- **Several labs in one input:** one core slide per lab (max 3); briefly note the grouping in the Plan speaker note.
-- **Very short statement** (one sentence): cover only what it says, using the minimum structure; do not add content to reach the slide count.
-
-## 5. Practical Slides
-
-Every practical slide uses this pattern:
-
-**Goal:** what the learner does and why.
-**Code / Command / Syntax:** a small, correct example.
-**Expected result:** what should happen or appear.
-
-Rules: introduce a concept before using it, explain why a command or syntax is used, avoid invented paths or credentials, and make the expected result match the example. Include examples only for concepts and tasks the statement requires, and state an expected result only when it follows directly from the example. Skip the code block on purely conceptual slides.
-
-## 6. Readability Limits (per slide)
-
-- Title: about 8 words max.
-- Max 5 bullets of about 12 words each.
-- Max 12 lines per code block.
-- Max 1 table, up to 4 columns.
-- Paragraphs: 2 short lines max.
-- One example per slide, with whitespace.
-
-If a limit would make a technical detail misleading, simplify or split across existing slides without exceeding 10 slides.
-
-## 7. Speaker Notes
-
-Add notes to every slide as an HTML comment at the end of the slide, in English, 20 to 50 words (never over 60):
-
-```
-<!--
-Speaker notes: Explain the main point in 2 or 3 natural sentences.
--->
-```
-
-Notes help the student speak, not repeat the bullets; they also hold assumptions and caveats. Do not claim they appear automatically in Presenter View.
-
-## 8. Marp Front Matter (template)
-
-Begin the generated file with this front matter, exactly. It is shown inside a code fence here for documentation only. **In the real output, do not include the surrounding fence**; the file must start with the first `---`.
+Start each presentation with one valid YAML front matter block, at the very top of the file. Use the following settings and style as the default; preserve their values unless the user asks for a different configuration:
 
 ```yaml
 ---
@@ -107,127 +55,111 @@ marp: true
 theme: default
 paginate: true
 size: 16:9
-footer: "Solicode · Tanger"
 style: |
   section {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    box-sizing: border-box;
+    padding: 48px 64px;
+    background: #f8fafc;
+    color: #334155;
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 26px;
-    color: #1f2937;
-    background: #ffffff;
-    padding: 50px 64px;
   }
   h1 {
-    color: #0b3d91;
-    border-bottom: 3px solid #f97316;
+    color: #17324d;
+    border-bottom: 2px solid #7aa6a1;
     padding-bottom: 8px;
-    margin-bottom: 24px;
   }
-  h2 { color: #f97316; }
-  strong { color: #0b3d91; }
+  h2, strong {
+    color: #426b78;
+  }
   code {
-    background: #eef2ff;
-    color: #1e3a8a;
+    background: #e8eef2;
+    color: #17324d;
     border-radius: 4px;
-    padding: 2px 6px;
+    padding: 2px 5px;
   }
   pre {
-    background: #f1f5f9;
+    background: #edf2f5;
     border: 1px solid #cbd5e1;
-    border-radius: 8px;
+    border-radius: 6px;
     padding: 14px;
   }
   pre code {
     background: transparent;
-    color: #0f172a;
-    font-size: 0.7em;
+    color: #1e293b;
+    font-size: 0.78em;
     padding: 0;
   }
-  table { font-size: 0.8em; width: 100%; }
-  th { background: #0b3d91; color: #ffffff; }
-  footer { color: #94a3b8; font-size: 0.6em; }
+  table {
+    width: 100%;
+    font-size: 0.82em;
+  }
+  th {
+    background: #e2eaf0;
+    color: #17324d;
+  }
   section.lead {
-    background: linear-gradient(135deg, #0b3d91, #1e66d0);
-    color: #ffffff;
+    background: #e8eef2;
+    color: #17324d;
     text-align: center;
     justify-content: center;
   }
   section.lead h1 {
-    color: #ffffff;
-    border: none;
-    font-size: 1.9em;
+    color: #17324d;
+    border: 0;
+    font-size: 1.8em;
   }
-  section.lead h2, section.lead p, section.lead strong { color: #ffffff; }
-  section.lead footer { color: #cbd5e1; }
+  section.lead h2, section.lead p, section.lead strong {
+    color: #334155;
+  }
 ---
 ```
 
-Rules: front matter appears once, at the very top, with valid YAML indentation under `style: |`. The `---` inside it is not a slide separator. The `pre` background is light so syntax-highlighted code stays readable; do not change it unless asked.
+Marp syntax rules:
 
-## 9. Slide Syntax
+- The first `---` opens front matter; the next `---` closes it. Put slide content only after the closing delimiter.
+- Separate slides with a line containing exactly `---`. Do not insert slide separators inside an open code fence.
+- Use `#` for each slide's main heading and `##` only for useful subheadings.
+- Use valid Markdown lists and tables. Keep tables simple and readable when projected.
+- Fence code with the correct language identifier when known (for example, `javascript`, `html`, `css`, `bash`, `php`, `sql`, `json`, or `markdown`). Keep code examples short and syntactically valid.
+- Use Marp directives such as `<!-- _class: lead -->` on a slide when they improve hierarchy. Place the directive at the start of the slide content, not in the YAML front matter. Use the included `lead` styling; do not add gradients or rely on low-contrast text.
+- Use no raw HTML other than Marp directives and speaker-note comments. To display Markdown that contains fenced code blocks, use an outer fence longer than the inner fences.
+- Keep the CSS inside the YAML block scalar `style: |` correctly indented. Avoid unnecessary selectors, decorative effects, and colors outside the palette.
 
-- Separate slides with a line containing exactly `---`.
-- Slides 1 and last begin with `<!-- _class: lead -->` right after the separator.
-- `#` for the slide title, `##` only for useful sub-headings.
-- Fenced code blocks with the right language identifier (`bash`, `html`, `css`, `javascript`, `php`, `sql`, `json`, `markdown`).
-- Bold sparingly. No raw HTML except the lead directive and speaker-note comments.
-- A code block that must show Markdown with its own fences should use a longer outer fence (four backticks) so the slide does not break.
+## Visual Design and Readability
 
-## 10. Mini Example (one practical slide)
+Use a consistent classroom-friendly palette of navy, slate, soft blue-gray, muted teal, and light backgrounds. Prefer whitespace, clear hierarchy, and simple layouts. Avoid aggressive colors, gradients, excessive decoration, crowded slides, and low-contrast text.
 
-Format illustration only. Never copy its content into a deck unless the lab requires it.
+Adapt content density to the topic and slide dimensions. Prefer one main idea per slide; split dense explanations or code when needed. Keep titles concise, paragraphs short, and bullets focused. Use a table, diagram, or code block only when it makes the required material easier to understand. Ensure code and labels remain legible when projected.
 
-````
----
+For practical slides, make the learner's task and purpose clear. Include an **Expected result** only when it follows directly from the shown example or the lab statement. Purely conceptual slides do not need code.
 
-# Creating Headings
+## Speaker Notes
 
-**Goal:** Structure a document with titles.
+Add concise English speaker notes as an HTML comment at the end of slides when notes help the presenter explain concepts, transitions, assumptions, or caveats. Notes should add context rather than repeat slide text. Do not claim notes appear automatically in any particular presenter view.
 
 ```markdown
-# Main title
-## Section title
+<!--
+Speaker notes: Explain the idea in natural language and add a useful caveat.
+-->
 ```
 
-**Expected result:** A large title followed by a smaller section title.
+## Output
 
-<!--
-Speaker notes: Each extra # makes the heading one level smaller. Use only one main title per document.
--->
-````
+Return one complete Marp Markdown presentation and nothing else: no preface, outline, explanation, alternatives, or closing message.
 
-## 11. Subject Adaptation
+- If file creation is available and requested or appropriate, create `lab-presentation.md` in the relevant working location. Use the exact filename when the user specifies one.
+- Otherwise, return the entire presentation in one Markdown code block.
+- Do not create a presentation when the user asks only to revise or analyze this skill.
 
-Use only the pattern that matches the lab:
-- **Markdown / documentation:** source syntax plus the rendered result.
-- **Git / GitHub:** commands in logical order, purpose of each, verify with `git status` or `git log` when relevant.
-- **HTML / CSS / JS:** small snippets and the expected browser behavior.
-- **PHP / OOP / Laravel:** syntax, execution flow, consistent with the stated setup.
-- **SQL:** small schema, query, and sample result with matching column names.
-- **APIs:** request, response, and status codes at lab depth.
-- **Tools / configuration:** goal, setup steps, verification, likely beginner problems.
+## Silent Final Check
 
-## 12. Deliverable and Submission
-
-Describe exactly what the teacher requires. Show a sample folder structure only if it clarifies the submission, and label it "example". Include Git commands only when Git submission is required. Preserve any destination the statement gives; never invent repository names, URLs, or branches.
-
-## 13. Output
-
-Return **one complete Marp Markdown presentation and nothing else**: no introduction, outline, explanation, alternatives, or closing message.
-
-- If file creation is available, create `lab-presentation.md` (no extra outer code fence).
-- Otherwise, output the whole Markdown in a single code block.
-
-## 14. Silent Final Check
-
-- 8 to 10 slides total, following the 7 fixed + 1 to 3 core formula.
-- All text and notes in English.
-- Title slide shows Mounir L Maimouni, Supervised by Fouad Serraj, Solicode, and the real generation date (no placeholder, not hardcoded); slide 2 is titled "Plan".
-- Final slide is titled exactly "Thanks" with no Q&A wording and no slide after it.
-- Slide 4 contains Introduction, Problem, and Solution, all derived from the lab statement only.
-- Every explicit lab requirement is covered; no technology, example, or requirement beyond the lab statement was added.
-- Practical slides show Goal, code, Expected result.
-- Code is valid and consistent; nothing falsely claimed as executed or submitted.
-- Limits respected (5 bullets, 12 code lines).
-- Speaker notes on every slide.
-- Front matter valid and unfenced in the output; `---` separators and `lead` classes correct.
-- No invented URLs, images, or data.
+- All five required sections are clearly identifiable and in order.
+- Slide count and detail fit the lab's complexity; no fixed count has been imposed.
+- Concepts precede dependent examples; technical claims and code are accurate and consistent.
+- English is used by default, with technical syntax preserved.
+- Requirements, expected results, deliverables, and submission instructions are supported by the lab statement.
+- The file starts with valid YAML front matter containing the required Marp settings and correctly indented CSS.
+- Slide separators, Markdown headings, fences, directives, and speaker-note comments are correctly formed.
+- Styling uses the cool, low-contrast-risk palette and remains readable when projected.
+- The output contains only the requested presentation, not an explanation about it.

@@ -1,16 +1,16 @@
-let file = "http://localhost:8000/backend/api/api_ctg.php";
+let file = "../backend/api/api_ctg.php";
 document.addEventListener("DOMContentLoaded" , function(){
 
     
 
 // function getall data 
 function getallData(file){
- let tbdoy = document.querySelector('#table-category-body');
+ let tbody = document.querySelector('#table-categories-body');
     
     fetch(file)
     .then(reponse =>reponse.json())
     .then(data => {
-         tbdoy.innerHTML = "";
+         tbody.innerHTML = "";
 
          data.forEach(datas => {
              let tr = document.createElement("tr");
@@ -21,7 +21,7 @@ function getallData(file){
                 <td>${datas.colour}</td>
                 <td>${datas.icone}</td>
                 ` )
-         tbdoy.appendChild(tr);
+         tbody.appendChild(tr);
                 
         });
     })
@@ -68,7 +68,6 @@ form.addEventListener('submit',function(e){
 
 
 })
-
 
 
 
