@@ -55,32 +55,30 @@ style: |
   section.lead h2, section.lead p, section.lead strong { color: #ffffff; }
   section.lead footer { color: #cbd5e1; }
 ---
-
 <!-- _class: lead -->
 
-# Discovering Markdown Syntax
+# Discover Markdown
 
-**Mounir L Maimouni**
-
-Supervised by Fouad Serraj
-
-Solicode · [22/10/2026]
+Mounir L Maimouni  
+Supervised by Fouad Serraj  
+Solicode · October 23, 2026
 
 <!--
-Speaker notes: Introduce this beginner lab as a practical guide to Markdown syntax. The presentation demonstrates the requested document elements and explains what to check when their source is rendered by a Markdown viewer.
+Speaker notes: This lab introduces Markdown as a simple way to structure and format a document. I will demonstrate the requested syntax with small examples, then summarize the practical deliverable.
 -->
 
 ---
 
 # Plan
 
-1. Markdown and document structure
-2. Headings, paragraphs, and lists
-3. Links, images, tables, and code
-4. Deliver and review the document
+- Headings, paragraphs, and lists
+- Links and images
+- Tables and code blocks
+- A combined practical example
+- Deliverable and submission
 
 <!--
-Speaker notes: Preview the sequence from basic structure to richer document elements. Each example focuses on a small piece of Markdown so learners can copy the pattern, adapt it to their own text, and review its rendered form.
+Speaker notes: The presentation follows the elements named in the lab statement. First I will show basic document structure, then links and images, and finally tabular information and code.
 -->
 
 ---
@@ -88,129 +86,131 @@ Speaker notes: Preview the sequence from basic structure to richer document elem
 # Objectives
 
 - By the end, I can structure content with headings and paragraphs.
-- By the end, I can format ordered and unordered lists.
-- By the end, I can add links and image references.
-- By the end, I can create tables and fenced code blocks.
+- By the end, I can create ordered and unordered lists.
+- By the end, I can write links and image syntax.
+- By the end, I can format tables and code blocks.
 
 <!--
-Speaker notes: These objectives cover each syntax element required in the assignment. Learners should be able to write the source syntax and recognize the corresponding formatted result in a Markdown preview.
+Speaker notes: These outcomes match the requested Markdown elements. The practical examples combine the syntax so learners can see how separate pieces work together in one document.
 -->
 
 ---
 
-# Introduction
+# Introduction, Problem and Solution
 
-Markdown is a lightweight way to add structure and formatting to plain text.
+**Introduction:** Markdown is a lightweight syntax for structuring and formatting documents.
 
-**Use case:** write a project README that is easy to edit and read on GitHub.
+**Problem:** Plain text alone does not clearly distinguish document sections and content types.
+
+**Solution:** Use headings, paragraphs, lists, links, images, tables, and code blocks to organize the document.
 
 <!--
-Speaker notes: Markdown is useful when a document should remain readable as plain text while also rendering with headings, lists, and other formatting. GitHub is one familiar place where Markdown documents are rendered.
+Speaker notes: Markdown lets authors describe structure with readable characters. The lab addresses how to make a document organized and formatted, using the specific elements listed in the assignment.
 -->
 
 ---
 
-# Headings and Paragraphs
+# Structure Text and Lists
 
-**Goal:** Create a title hierarchy and separate two paragraphs.
+**Goal:** Create a clear title, section, paragraph, and list.
 
 ```markdown
-# Project notes
-## Overview
+# My document
+## First section
 
-This project organizes useful learning notes.
+Markdown keeps text readable.
 
-Each paragraph starts after a blank line.
+- First point
+- Second point
 ```
 
-**Expected result:** one main heading, a smaller section heading, and two separate paragraphs.
+**Expected result:** A titled section, a paragraph, and two bullet points.
 
 <!--
-Speaker notes: A number sign followed by a space creates a heading, and additional number signs indicate lower levels. A blank line separates paragraphs; keep heading levels in logical order for a clear document outline.
+Speaker notes: One or more hash characters create headings, while a blank line separates paragraphs. A hyphen starts a bullet list; numbering items creates an ordered list when steps need a sequence.
 -->
 
 ---
 
-# Lists, Links, and Images
+# Add Links and Images
 
-**Goal:** Combine a short checklist with a link and image syntax.
+**Goal:** Add a clickable link and an image with alternative text.
 
 ```markdown
-- Draft the content
-- Review the formatting
-  - Check the links
-
-[GitHub](https://github.com/)
-![Describe the image](image-source)
+[Documentation](destination)
+![Descriptive alternative text](image-source)
 ```
 
-**Expected result:** nested bullets, a clickable link, and an image when its source is replaced with a valid one.
+**Expected result:** The link text opens its destination; the image appears when its location is valid.
 
 <!--
-Speaker notes: Indent a nested bullet consistently so its relationship to the parent is clear. The image source is a placeholder, not an included image; replace it with an available image location and write alternative text that describes the image.
+Speaker notes: These examples show the syntax pattern without assuming a particular URL or image file. Replace each generic destination with the real resource for the document, and keep image alternative text descriptive.
 -->
 
 ---
 
-# Tables and Code Blocks
+# Present Tables and Code
 
-**Goal:** Present a compact comparison and a syntax-highlighted code sample.
+**Goal:** Compare two Markdown elements and include a small code example.
+
+| Element | Purpose |
+|:--|:--|
+| Table | Arrange information in rows and columns |
+| Code block | Display code on separate, formatted lines |
 
 ````markdown
-| Element | Markdown | Use |
-|:--|:--|:--|
-| Heading | `## Title` | Organize |
-| Code | Triple backticks | Show code |
-
-```javascript
-console.log("Hello, Markdown!");
+```python
+message = "Hello, Markdown!"
+print(message)
 ```
 ````
 
-**Expected result:** a three-column table and a fenced JavaScript code block.
+**Expected result:** A two-row table and a rendered fenced block containing the Python example.
 
 <!--
-Speaker notes: The pipe characters divide table cells, and the separator row follows the header. Fenced code blocks use matching groups of backticks, with a language label such as javascript after the opening fence for syntax highlighting.
+Speaker notes: In a Markdown table, vertical bars divide columns and a separator row follows the headings. Three backticks around code create a fenced block; the language label can enable syntax highlighting.
 -->
 
 ---
 
 # Deliverable and Submission
 
-**Expected deliverable:** `lab-presentation.md`
+- **Deliverable:** a Markdown document with practical examples of every requested element.
+- Add the completed document to the GitHub repository provided for the lab.
 
 ```bash
-git add lab-presentation.md
-git commit -m "Add Markdown lab presentation"
+git add <deliverable>
+git commit -m "Add Markdown lab deliverable"
 git push
 ```
 
-**Expected result:** the Markdown presentation is committed and pushed to the GitHub repository configured for this lab.
+**Expected result:** The deliverable is committed and pushed to the provided repository.
 
 <!--
-Speaker notes: Save the completed presentation in the lab folder, then stage, commit, and push it to the repository used for the assignment. The push assumes that a remote repository and appropriate GitHub authentication are already configured.
+Speaker notes: The assignment asks for practical examples and submission in the GitHub repository. Use the repository and filename already provided for the lab; no repository address or branch is specified here.
 -->
 
 ---
 
 # Takeaways and Common Mistakes
 
-- Use blank lines to separate paragraphs and content blocks.
-- Keep headings in a logical order.
-- Describe images and verify their sources.
-- Mistake: missing space after `#` → add one.
-- Mistake: unclosed code fence → add its matching fence.
+- Headings and blank lines make document structure easier to follow.
+- Lists, links, images, and tables organize different kinds of information.
+- Fenced blocks keep code readable.
+- Mistake: missing blank lines; fix: separate paragraphs and sections.
+- Mistake: invalid image location; fix: use the correct resource location.
 
 <!--
-Speaker notes: Consistent spacing and correctly paired syntax markers make Markdown easier to read and maintain. Preview the finished document and check that the image source, table separators, and code fences produce the intended output.
+Speaker notes: Markdown syntax is easiest to check by previewing the document. Separate paragraphs with blank lines, and make sure a link or image points to a valid destination before sharing the file.
 -->
 
 ---
-
 <!-- _class: lead -->
 
-# Thanks
+# Thank You
+
+Thank you for following this introduction to Markdown.
 
 <!--
-Speaker notes: Invite questions about how the Markdown source maps to its rendered result. Ask learners to choose one document element from the lab and describe where they would use it in a README or set of notes.
+Speaker notes: This presentation covered the requested Markdown syntax and practical examples. The learner can now apply these building blocks in the document prepared for the lab.
 -->

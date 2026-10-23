@@ -13,19 +13,19 @@ The deck must explain what the lab is, which concepts are needed, how to do the 
 
 ## 2. Input
 
-The only input is the lab statement (French, English, Darija, or other). Never ask for extra files, code, screenshots, or clarifications. If something is missing, make the smallest reasonable assumption and mention it in a speaker note.
+The only input is the lab statement (French, English, Darija, or other). Never ask for extra files, code, screenshots, or clarifications. If something is missing, omit it; never invent it. Only when a missing detail is essential to avoid a wrong statement, state a minimal assumption in a speaker note.
 
 Before writing, silently extract: the main objective, required concepts, practical tasks, tools, deliverable and submission method, and any stated constraints.
 
-Separate what is **required** (explicit in the statement) from **prerequisites** (needed to perform it) and **optional context** (only if clearly valuable). Never present an assumption as a teacher requirement.
+Separate what is **required** (explicit in the statement) from **prerequisites** (the minimum needed to understand or perform a required task). Include only these two; do not add optional context. Never present an assumption as a teacher requirement.
 
 ## 3. Non-Negotiable Rules
 
 - **Language:** all slide text and speaker notes in English, whatever the input language. Keep commands, code, filenames, and technical terms unchanged. Switch language only if the user explicitly asks.
 - **Length:** 8 to 10 slides in total, never more.
-- **Truthfulness:** never invent names, grades, groups, teachers, dates, results, URLs, image links, file paths, or tool capabilities. Use the fixed identity below and `[Date]` as the only placeholder. Never invent any other personal detail (group, grade, ID). Never claim anything was run, tested, committed, or submitted. Label outputs **Expected result** or **Example output**.
+- **Truthfulness:** never invent names, grades, groups, teachers, dates, results, URLs, image links, file paths, or tool capabilities. Use the fixed identity and the real generation date defined in section 3b. Never use a date placeholder. Never invent any other personal detail (group, grade, ID). Never claim anything was run, tested, committed, or submitted. Label outputs **Expected result** or **Example output**.
 - **Accuracy:** keep code minimal, valid, and consistent across slides. If a command depends on OS, shell, or version, state that briefly.
-- **Scope:** cover every explicit requirement; add no unrelated technology or advanced topic.
+- **Scope (critical):** the teacher's lab statement defines the scope; this skill defines only how to analyze and present it. Cover every explicit requirement and add nothing else: no technologies, tools, frameworks, libraries, concepts, features, exercises, examples, deliverables, or requirements that the statement does not request. Do not expand the lab into a larger or more advanced project, and keep the teacher's terminology. Do not fabricate results, outputs, screenshots, statistics, or implementation details.
 - **Visuals:** no external images. Prefer tables, code blocks, and text diagrams. Include an official documentation URL only if it is well known and truly useful.
 
 ## 3b. Fixed Identity (always use)
@@ -33,7 +33,7 @@ Separate what is **required** (explicit in the statement) from **prerequisites**
 - **Presenter name:** always `Mounir L Maimouni`.
 - **Supervisor:** always `Fouad Serraj`, written as `Supervised by Fouad Serraj`.
 - **Institution:** `Solicode`.
-- **Date:** `[Date of now]` placeholder only.
+- **Date:** the actual date on which the presentation is generated, read at generation time from the current system date or another reliable available source. Never hardcode a date and never use a placeholder (`[Date]`, `DD/MM/YYYY`, `Current Date`). Format as `Month D, YYYY` (format example only: `March 5, 2026`). If the date cannot be verified, omit the date line instead of inventing one.
 
 Use this exact spelling everywhere. Do not ask for these details and do not replace them with `[Your Name]`.
 
@@ -43,20 +43,26 @@ Every deck has **7 fixed slides + 1 to 3 core slides = 8 to 10 slides**.
 
 | # | Slide | Content |
 |---|-------|---------|
-| 1 | Title | Lab title, `Mounir L Maimouni`, `Supervised by Fouad Serraj`, `Solicode`, `[Date]` (class `lead`) |
+| 1 | Title | Lab title, `Mounir L Maimouni`, `Supervised by Fouad Serraj`, `Solicode`, current date from 3b (class `lead`) |
 | 2 | Plan | Slide title is exactly "Plan"; 4 to 5 topics matching the deck |
 | 3 | Objectives | 3 to 5 outcomes starting with "By the end, I can..." |
-| 4 | Introduction | What the tool or concept is, why it matters, one use case |
+| 4 | Introduction, Problem and Solution | Three short labelled parts: **Introduction** (what the lab's tool or concept is), **Problem** (the need or difficulty it addresses), **Solution** (how the lab's tool or technique answers it); see rules below |
 | 5 to 7 | **Core slides (1 to 3)** | Concepts + practical demos, basic to advanced |
 | next | Deliverable and Submission | Expected files and submission steps, only as the statement says |
-| next | Takeaways and Common Mistakes | 3 takeaways, 2 or 3 beginner mistakes with fixes |
-| last | Closing / Q&A | One short line (class `lead`) |
+| next | Takeaways and Common Mistakes | 3 takeaways, 2 or 3 beginner mistakes with fixes, limited to concepts covered in the lab |
+| last | Thank You | Slide title is exactly "Thank You"; at most one short closing line (class `lead`); no "Questions" or "Q&A" wording; no slide after it |
+
+Rules for slide 4:
+- Exactly three labelled parts, one or two short lines each (max 5 bullets in total).
+- **Problem** and **Solution** come only from the lab's stated objective and subject. Do not invent scenarios, statistics, case studies, or tools.
+- The Solution must be what the lab itself teaches or produces, not an extra technology.
+- If the statement implies no explicit problem, state the general need behind the lab's objective in one line, using the teacher's terminology.
 
 How to fit any lab:
 - **Large lab:** group related concepts on one core slide; prioritize explicit requirements. Max 3 core slides.
 - **Small lab:** use 1 core slide and, if needed, merge Plan and Objectives into one slide (total 8 or fewer fixed slides).
 - **Several labs in one input:** one core slide per lab (max 3); briefly note the grouping in the Plan speaker note.
-- **Very short statement** (one sentence): infer the standard beginner scope of the topic and state the assumption in a speaker note.
+- **Very short statement** (one sentence): cover only what it says, using the minimum structure; do not add content to reach the slide count.
 
 ## 5. Practical Slides
 
@@ -66,7 +72,7 @@ Every practical slide uses this pattern:
 **Code / Command / Syntax:** a small, correct example.
 **Expected result:** what should happen or appear.
 
-Rules: introduce a concept before using it, explain why a command or syntax is used, avoid invented paths or credentials, and make the expected result match the example. Skip the code block on purely conceptual slides.
+Rules: introduce a concept before using it, explain why a command or syntax is used, avoid invented paths or credentials, and make the expected result match the example. Include examples only for concepts and tasks the statement requires, and state an expected result only when it follows directly from the example. Skip the code block on purely conceptual slides.
 
 ## 6. Readability Limits (per slide)
 
@@ -168,6 +174,8 @@ Rules: front matter appears once, at the very top, with valid YAML indentation u
 
 ## 10. Mini Example (one practical slide)
 
+Format illustration only. Never copy its content into a deck unless the lab requires it.
+
 ````
 ---
 
@@ -213,8 +221,10 @@ Return **one complete Marp Markdown presentation and nothing else**: no introduc
 
 - 8 to 10 slides total, following the 7 fixed + 1 to 3 core formula.
 - All text and notes in English.
-- Title slide shows Mounir L Maimouni, Supervised by Fouad Serraj, Solicode, and `[Date]`; slide 2 is titled "Plan".
-- Every explicit lab requirement is covered; nothing unrelated added.
+- Title slide shows Mounir L Maimouni, Supervised by Fouad Serraj, Solicode, and the real generation date (no placeholder, not hardcoded); slide 2 is titled "Plan".
+- Final slide is titled exactly "Thanks" with no Q&A wording and no slide after it.
+- Slide 4 contains Introduction, Problem, and Solution, all derived from the lab statement only.
+- Every explicit lab requirement is covered; no technology, example, or requirement beyond the lab statement was added.
 - Practical slides show Goal, code, Expected result.
 - Code is valid and consistent; nothing falsely claimed as executed or submitted.
 - Limits respected (5 bullets, 12 code lines).
