@@ -4,6 +4,109 @@ theme: default
 paginate: true
 ---
 
+
+<style>
+/* General slide style */
+section {
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: Arial, sans-serif;
+    padding: 45px 65px;
+    font-size: 23px;
+}
+
+/* Headings */
+h1 {
+    color: #0f172a;
+    font-size: 38px;
+}
+
+h2 {
+    color: #334155;
+    font-size: 30px;
+}
+
+h3 {
+    color: #475569;
+    font-size: 25px;
+}
+
+/* Cover slide */
+section.cover {
+    background-color: #0f172a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 35px 60px;
+}
+
+section.cover h1 {
+    color: white;
+    font-size: 48px;
+    margin: 20px 0 10px;
+}
+
+section.cover h3 {
+    color: #cbd5e1;
+    font-size: 24px;
+    margin: 10px 0 25px;
+}
+
+section.cover p {
+    color: white;
+    font-size: 19px;
+    margin: 7px;
+}
+
+/* Logos */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    margin-bottom: 15px;
+}
+
+.logo-container img {
+    width: 125px;
+    height: 90px;
+    object-fit: contain;
+}
+
+/* Tables */
+section table {
+    width: 100%;
+    font-size: 22px;
+    border-collapse: collapse;
+}
+
+section th {
+    background-color: #0f172a;
+    color: white;
+}
+
+section th,
+section td {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+}
+
+/* Images */
+section img {
+    object-fit: contain;
+}
+
+/* Pagination */
+section::after {
+    color: #64748b;
+    font-size: 14px;
+}
+</style>
+
+<!-- _class: cover -->
 <div class="cover" >
 
 
