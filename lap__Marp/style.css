@@ -1,0 +1,51 @@
+
+/* @theme my-theme */
+
+section {
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: Arial, sans-serif;
+}
+
+section.cover {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 70px;
+}
+
+section.cover h1 {
+    color: white;
+    font-size: 46px;
+    margin: 25px 0 10px;
+}
+
+section.cover h3 {
+    color: #cbd5e1;
+    font-size: 25px;
+    margin: 10px 0 30px;
+}
+
+section.cover p {
+    color: white;
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+section.cover strong {
+    color: #94a3b8;
+}
+
+h1 {
+    color: #0f172a;
+}
+
+h2 {
+    color: #334155;
+}
