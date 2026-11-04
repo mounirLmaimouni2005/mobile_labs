@@ -2,91 +2,393 @@
 marp: true
 paginate: true
 theme: default
+size: 16:9
 ---
+
+<style>
+:root {
+  --navy: #0f172a;
+  --teal: #0f766e;
+  --accent: #14b8a6;
+  --white: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --surface: #f1f5f9;
+  --border: #cbd5e1;
+}
+
+/* GENERAL */
+section {
+  background: #f8fafc;
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.35;
+  padding: 42px 55px;
+}
+
+/* HEADINGS */
+h1 {
+  color: var(--navy);
+  font-size: 2.1em;
+  font-weight: 750;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: var(--teal);
+  font-size: 1.5em;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 9px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: var(--navy);
+  font-size: 1.12em;
+  margin: 12px 0 7px;
+}
+
+/* TEXT */
+p {
+  margin: 8px 0;
+}
+
+strong {
+  color: var(--teal);
+}
+
+em {
+  color: var(--muted);
+}
+
+/* LISTS */
+ul, ol {
+  padding-left: 28px;
+  margin: 10px 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+/* LINKS */
+a {
+  color: var(--teal);
+  font-weight: 600;
+}
+
+/* INLINE CODE */
+code {
+  background: #ccfbf1;
+  color: #115e59;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+/* CODE BLOCKS */
+pre {
+  background: #172554;
+  color: #ffffff;
+  border-left: 5px solid var(--accent);
+  border-radius: 9px;
+  padding: 14px 18px;
+  font-size: 0.75em;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+pre code,
+pre code span {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+/* TABLES */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82em;
+  margin-top: 12px;
+}
+
+th {
+  background: var(--teal);
+  color: white;
+  padding: 11px;
+  text-align: left;
+}
+
+td {
+  background: white;
+  padding: 10px;
+  border: 1px solid var(--border);
+}
+
+tr:nth-child(even) td {
+  background: var(--surface);
+}
+
+/* BLOCKQUOTES */
+blockquote {
+  background: #ccfbf1;
+  border-left: 5px solid var(--accent);
+  padding: 12px 18px;
+  color: #134e4a;
+  border-radius: 6px;
+}
+
+/* SLIDE NUMBER */
+section::after {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* COVER */
+section.cover {
+  background: var(--navy);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section.cover h1 {
+  color: white;
+  font-size: 2.8em;
+  border-bottom: 4px solid var(--accent);
+  padding-bottom: 18px;
+}
+
+section.cover h2 {
+  color: #5eead4;
+  border: none;
+  font-size: 1.25em;
+}
+
+section.cover p {
+  color: #cbd5e1;
+}
+
+
+/* COVER LOGOS */
+section.cover .logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 25px;
+}
+
+section.cover .logos img {
+  height: 75px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  background: white;
+  padding: 7px 12px;
+  border-radius: 8px;
+}
+
+/* CLOSING */
+section.closing {
+  background: var(--navy);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section.closing h1 {
+  color: white;
+}
+
+section.closing strong {
+  color: #5eead4;
+}
+
+/* COMPACT SLIDES */
+section.compact {
+  font-size: 16px;
+  padding: 35px 48px;
+}
+
+section.compact h2 {
+  margin-bottom: 12px;
+}
+
+section.compact li {
+  margin-bottom: 5px;
+}
+
+section.compact pre {
+  font-size: 0.68em;
+  padding: 10px 14px;
+}
+</style>
+
+<!-- _class: cover -->
+<div class="logos">
+  <img src="images/logo-OFPPT.jpg" alt="OFPPT Logo">
+  <img src="images/solicodeLogo.jpg" alt="Solicode Logo">
+</div>
 
 # Development Environment
 
+## Technical Lab
 
+**Configuring Visual Studio Code for a Better Development Workflow**
 
-**Sujet : Development Environment Lab**
+<br>
 
----
+**Presented by:** Mounir L Maimouni
 
-## Lab Plan
-
-1. Problems encountered during the lab
-2. Showing hidden files and folders
-3. Configuring VS Code extensions
-4. Understanding the role of an IDE
-5. Best practices for extension management
+**Supervised by:** E-sseraj Fouad
 
 ---
 
-## Problems Encountered
+## 01 — Presentation Plan
 
-- Hidden files and folders, such as `.git`, were not visible in the file explorer.
+1. Page de garde
+2. Plan
+3. Stack technique
+4. Définitions importantes
+5. Problème et besoin
+6. Solution et pratique
+7. Résultats et conclusion
+
+---
+
+## 02 — Technical Stack
+
+The tools and technologies used during this Lab:
+
+| Tool | Purpose |
+|---|---|
+| Visual Studio Code | Code editor and development workspace |
+| Windows File Explorer | Manage files and folders |
+| VS Code Extensions | Add useful development features |
+| Git | Track project changes |
+| Path Intellisense | Suggest file paths |
+| Error Lens | Display diagnostics inline |
+| GitLens | Explore Git history |
+| Todo Tree | Organize TODO and FIXME comments |
+
+---
+
+## 03 — Important Definitions
+
+**Development Environment**
+
+A set of tools and configurations used to develop software.
+
+**IDE (Integrated Development Environment)**
+
+A workspace that combines tools such as an editor, terminal, and debugger.
+
+**Extension**
+
+An additional tool that adds features to Visual Studio Code.
+
+**Hidden Files**
+
+Files or folders that are not normally displayed in the file explorer.
+
+**Git**
+
+A version control system used to track changes in a project.
+
+---
+
+## 04 — Problems and Needs
+
+During the Lab, several difficulties were identified:
+
+- Hidden files and folders, such as `.git`, were not visible.
 - The `.md` file extension was not displayed as expected.
-- Completing file paths manually could lead to mistakes.
-- Identifying errors directly in the code was not always easy.
-- Tracking code changes and remembering unfinished tasks could be difficult.
+- Writing file paths manually could lead to mistakes.
+- Errors and warnings were not always easy to notice.
+- Tracking code modifications and unfinished tasks was difficult.
+
+**Main Need**
+
+Configure the development environment to make coding, navigation, debugging, and project organization easier.
 
 ---
 
-<!-- _class: light -->
+## 05 — Solutions and Practical Demonstrations
 
-## Solutions Implemented
+### Step 1 — Show Hidden Files and Folders
 
-### 01 — Show hidden files
+**Problem:** Hidden files and folders, including `.git`, were not visible.
 
-Enabled the relevant file-explorer setting so hidden files and folders, including `.git`, could be seen.
+**Solution:** Enable the display of hidden items in Windows File Explorer.
 
-### 02 — Display .md extension
+**Practical demonstration:**
 
-Adjusted the relevant VS Code option or system setting so `.md` appeared in the explorer.
+1. Open File Explorer.
+2. Go to **View → Show**.
+3. Enable **Hidden items**.
 
-### 03 — Improve code navigation and tracking
-
-Configured four VS Code extensions to improve productivity and code organization.
+**Result:** Hidden files and folders become visible.
 
 ---
 
-## 01 — Path Intellisense
+### Step 2 — Display File Extensions
 
-### Problem
+**Problem:** The `.md` extension was not displayed as expected.
 
-Writing file paths manually can lead to spelling mistakes and incorrect references.
+**Solution:** Enable file name extensions in Windows File Explorer.
 
-### Solution
+**Practical demonstration:**
 
-**Path Intellisense** suggests file and folder paths while writing code.
+1. Open File Explorer.
+2. Go to **View → Show**.
+3. Enable **File name extensions**.
 
-### Practical demonstration
+**Result:** Extensions such as `.md`, `.html`, and `.css` become visible.
+
+---
+
+### Step 3 — Configure Path Intellisense
+
+**Problem:** Writing file paths manually can lead to spelling mistakes and incorrect references.
+
+**Solution:** Install **Path Intellisense** to suggest file and folder paths while writing code.
+
+**Practical demonstration:**
 
 ```html
 <link rel="stylesheet" href="css/">
 ```
 
-When completing the path, the extension can suggest available files, such as `style.css`.
+The extension can suggest available files, such as `style.css`.
 
-### Result
+**Result:**
 
-- Faster file navigation
-- Fewer path-related mistakes
-- Easier file referencing
+- Faster file navigation.
+- Fewer path-related mistakes.
+- Easier file referencing.
 
 ---
 
-## 02 — Error Lens
+### Step 4 — Configure Error Lens
 
-### Problem
+**Problem:** Errors and warnings can be difficult to notice when they appear only in the Problems panel.
 
-Errors and warnings can be difficult to notice when they appear only in the Problems panel.
+**Solution:** Install **Error Lens** to display diagnostic messages beside the relevant lines of code.
 
-### Solution
-
-**Error Lens** displays diagnostic messages directly beside the relevant lines of code.
-
-### Practical demonstration
+**Practical demonstration:**
 
 ```javascript
 const username = "Mounir";
@@ -94,54 +396,46 @@ const username = "Mounir";
 console.log(usernme);
 ```
 
-The misspelled variable `usernme` can trigger a diagnostic when a suitable JavaScript diagnostic provider detects it.
+A suitable JavaScript diagnostic provider can detect the misspelled variable.
 
-### Result
+**Result:**
 
 - Errors become easier to notice.
 - Debugging becomes more convenient.
-- Problems can be identified closer to the affected code.
+- Problems are easier to investigate.
 
-**Note:** Error Lens displays diagnostics provided by other tools; it does not detect every error by itself.
-
----
-
-## 03 — GitLens
-
-### Problem
-
-When working on a project, it can be difficult to know who modified a line and which commit introduced the change.
-
-### Solution
-
-**GitLens** provides additional Git information inside Visual Studio Code.
-
-### Practical demonstration
-
-- Open a Git repository.
-- Select a line of code.
-- Inspect its Git blame information.
-- Explore the file history and related commits.
-
-### Result
-
-- Better understanding of code changes
-- Easier investigation of previous modifications
-- Improved collaboration within a team
+*Note: Error Lens displays diagnostics provided by other tools; it does not detect every error by itself.*
 
 ---
 
-## 04 — Todo Tree
+### Step 5 — Configure GitLens
 
-### Problem
+**Problem:** It can be difficult to know who modified a line and which commit introduced a change.
 
-Important reminders and unfinished tasks can be forgotten when they are scattered across different files.
+**Solution:** Install **GitLens** to explore Git information directly inside Visual Studio Code.
 
-### Solution
+**Practical demonstration:**
 
-**Todo Tree** collects comments containing keywords such as `TODO` and `FIXME` into a dedicated tree view.
+1. Open a Git repository.
+2. Select a line of code.
+3. Inspect its Git blame information.
+4. Explore file history and related commits.
 
-### Practical demonstration
+**Result:**
+
+- Better understanding of code changes.
+- Easier investigation of previous modifications.
+- Improved collaboration within a team.
+
+---
+
+### Step 6 — Configure Todo Tree
+
+**Problem:** Important reminders and unfinished tasks can be forgotten when they are scattered across different files.
+
+**Solution:** Install **Todo Tree** to collect comments containing keywords such as `TODO` and `FIXME`.
+
+**Practical demonstration:**
 
 ```javascript
 // TODO: Validate the form before submitting.
@@ -151,7 +445,7 @@ Important reminders and unfinished tasks can be forgotten when they are scattere
 
 Open the Todo Tree view to find these comments across the project.
 
-### Result
+**Result:**
 
 - Unfinished tasks become easier to find.
 - Code reminders are centralized.
@@ -159,52 +453,48 @@ Open the Todo Tree view to find these comments across the project.
 
 ---
 
-## What Is an IDE?
+### Step 7 — Understand the Role of an IDE
 
-An **IDE** (Integrated Development Environment) brings the tools for building software together in one workspace.
+An IDE brings different development tools together in one workspace.
 
-- **Editor:** write and organize code
-- **Terminal:** run commands without leaving the workspace
-- **Debugger:** find and fix problems
-- **Extensions:** add tools for a language or task
+- **Editor:** Write and organize code.
+- **Terminal:** Run commands.
+- **Debugger:** Find and fix problems.
+- **Extensions:** Add useful features.
 
-Visual Studio Code is a code editor that becomes an IDE-like workspace through its built-in tools and extensions.
-
----
-
-## Configure a VS Code Extension
-
-1. Open **Extensions** with `Ctrl + Shift + X`.
-2. Search for the extension you need and check its publisher and description.
-3. Select **Install**, then follow any setup instructions.
-4. Open the extension's page or **Settings** to adjust its options.
-5. Choose **User** settings for your account or **Workspace** settings for this project.
-
-Example: install Live Server, then use its extension page/settings to choose how it launches your local web page.
+Visual Studio Code is a code editor that provides an IDE-like development workspace through its built-in tools and extensions.
 
 ---
 
-## Keep Extensions Useful
+## 06 — Results and Acquired Skills
 
-- Install only extensions that support your work.
-- Review an extension's settings after installing it.
-- Disable or uninstall extensions you no longer use.
-- Share project-specific settings with teammates when they improve consistency.
-- Verify that each extension works correctly in your development environment.
+After completing the Lab, the development environment became easier to use and manage.
+
+**Results:**
+
+- Hidden files and file extensions can be displayed.
+- File navigation becomes easier.
+- Code diagnostics are more visible.
+- Git history can be explored inside VS Code.
+- Unfinished tasks can be organized in one place.
+
+**Skills Acquired:**
+
+- Configure Windows File Explorer.
+- Install and manage VS Code extensions.
+- Understand the role of an IDE.
+- Improve code navigation and project organization.
 
 ---
 
-## Conclusion
+<!-- _class: closing -->
 
-Configuring Visual Studio Code and choosing suitable extensions can improve the development workflow.
+# Conclusion
 
-- **Path Intellisense:** assists with file paths.
-- **Error Lens:** displays diagnostics inline.
-- **GitLens:** helps explore Git history and code changes.
-- **Todo Tree:** organizes unfinished tasks and reminders.
+A well-configured development environment makes software development more organized, efficient, and comfortable.
 
-**Final objective:** create a more organized, efficient, and comfortable development environment.
+**Choosing the right tools and extensions improves the daily development workflow.**
 
+<br>
 
-
-
+**Thank You!**
