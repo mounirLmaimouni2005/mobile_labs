@@ -25,8 +25,9 @@ Utiliser cette skill pour créer ou modifier un fichier de présentation Marp (`
 
 - Rédiger en français et adapter le contenu aux sources du lab.
 - Ne pas inventer le problème ou la solution de l'étudiant. Lui demander ces informations avant de rédiger les diapositives correspondantes; à défaut, laisser des emplacements explicites à compléter.
-- Pour un lab technique, inclure un Quick Start et un Hello World fonctionnel. Déclarer le langage de chaque bloc de code et vérifier que les commandes et exemples correspondent à l'environnement réel.
+- Pour un lab technique, inclure un Quick Start et un Hello World fonctionnel seulement s'ils sont demandés ou cohérents avec les livrables définis dans le README. Réutiliser un exemple prévu plutôt que d'ajouter une démonstration concurrente. Déclarer le langage de chaque bloc de code et vérifier que les commandes et exemples correspondent à l'environnement réel.
 - Expliquer clairement les termes techniques; ne pas présumer que le public les connaît.
+- Pour le PHP Lab, aligner les notions, noms de fichiers, exemples, commandes et résultats sur le README, les tutoriels et les exemples PHP. Ne pas introduire dans les diapositives un exemple ou un résultat qui n'existe pas dans les livrables correspondants.
 
 ## Lisibilité
 

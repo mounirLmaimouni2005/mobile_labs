@@ -29,8 +29,8 @@ style: |
 
 ## Erreurs & exceptions · Namespaces · Traits
 
-**Étudiant·e :** [à compléter]  
-**Encadrant·e :** [à compléter]
+**Étudiant·e :** L maimouni Mounir 
+**Encadrant·e :** E-sseraj Fouad
 
 *Exemples illustratifs — intégration projet à confirmer*
 

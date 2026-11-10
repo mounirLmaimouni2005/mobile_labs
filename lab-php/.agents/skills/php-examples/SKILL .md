@@ -15,7 +15,7 @@ Utilise-la pour créer ou adapter des exercices PHP, des exemples de notions du 
 
 ## Entrées et contexte
 
-- Lis le README ou le brief fourni et les fichiers voisins de la destination demandée.
+- Lis le README complet, les règles applicables et les fichiers voisins de la destination demandée.
 - Examine `composer.json`, les instructions applicables et le code pertinent pour identifier la version PHP, le framework, l'autoload et les conventions réelles.
 - Repère si l'exemple peut utiliser des classes ou services existants. N'invente pas de modèles, de dépendances, de versions ou de problèmes vécus.
 - Si un détail manque mais qu'une hypothèse simple permet d'avancer, choisis un exemple autonome et signale clairement ce qui est simulé. Demande une précision seulement si le choix change sensiblement le résultat.
@@ -24,13 +24,14 @@ Utilise-la pour créer ou adapter des exercices PHP, des exemples de notions du 
 
 1. Reformule le livrable attendu et choisis le chemin demandé. Préserve les fichiers existants; ne les remplace pas sans examiner leur contenu.
 2. Déduis la version PHP et les dépendances à partir des fichiers du projet. N'utilise que des fonctions, syntaxes et commandes compatibles.
-3. Crée un sous-dossier par notion ou exercice lorsque plusieurs exemples sont demandés. Dans chaque sous-dossier, fournis un fichier PHP exécutable nommé `exemple.php` et un `tutoriel.md` associé. Si une structure existante impose d'autres noms, conserve-la et documente clairement le chemin de l'exemple.
-4. Dans chaque tutoriel, explique l'exemple lui-même, pas seulement la notion : parcours les lignes ou blocs importants dans l'ordre d'exécution, définis le rôle des éléments PHP employés, et relie chaque étape à son effet observable. Indique aussi l'objectif, les fichiers concernés, la commande à exécuter depuis un répertoire précis, le résultat attendu, le lien avec l'architecture du projet et une limite ou un exercice complémentaire. Adapte le niveau de détail à la demande.
-5. Relie chaque exemple à un cas d'usage concret du projet. Distingue clairement une démonstration autonome d'une fonctionnalité réellement intégrée.
-6. Garde le code petit et pédagogique : entrées explicites, noms descriptifs, types lorsque le projet les utilise et sorties observables. Montre les exceptions traitées à une frontière appropriée; emploie les namespaces selon l'autoload réel; n'emploie un trait que pour un comportement partagé qui s'y prête.
-7. Ajoute ou actualise un README parent qui liste chaque notion, son exemple et son tutoriel, avec les commandes de démarrage quand plusieurs dossiers sont concernés.
-8. Valide les fichiers PHP avec `php -l` si PHP est disponible. Lance les tests ciblés pertinents si le projet en possède. Si les outils manquent, ne prétends pas avoir exécuté les exemples et indique précisément la vérification à effectuer.
-9. Résume les fichiers créés, les commandes d'exécution, le résultat de validation et les limites éventuelles.
+3. Respecte les chemins et noms définis par le README. Pour le PHP Lab, crée un fichier par exemple sous `examples/` et un tutoriel séparé sous `tutorials/`, appariés par numéro et notion. N'invente pas de dossiers par concept lorsque le README définit une structure différente.
+4. Écris chaque tutoriel pour un public débutant. Pour chaque notion, présente les définitions, son utilité, la syntaxe essentielle, une explication ordonnée des blocs de l'exemple associé, les bonnes pratiques, les erreurs fréquentes, une commande d'exécution depuis la racine du projet, le résultat attendu et un exercice.
+5. Fais correspondre exactement le tutoriel et son exemple : noms, entrées, commandes, comportement et sortie. Un exemple doit être exécutable seul et ne doit pas nécessiter de dépendances non disponibles. Distingue clairement démonstration autonome, scénario fictif pédagogique et code réellement intégré.
+6. Garde le code court, pédagogique et techniquement exact : entrées explicites, noms descriptifs, types adaptés au niveau et sorties observables. Traite les exceptions à une frontière appropriée; emploie les namespaces uniquement selon les conventions/autoload observés ou explique le caractère autonome de la démonstration; n'emploie un trait que pour un comportement partagé pertinent.
+7. N'invente ni architecture applicative, ni dépendance, ni version, ni cas vécu. Toute recommandation d'intégration doit être explicitement présentée comme une possibilité lorsque le dépôt ne l'établit pas.
+8. Valide chaque fichier PHP avec `php -l` et exécute chaque exemple si PHP est disponible. Vérifie que le résultat observé correspond au tutoriel. Lance les tests ciblés existants si le projet en possède. Si un outil manque, consigne la validation non effectuée sans la présenter comme réussie.
+9. Ne modifie le README parent que si la demande le requiert. Ne crée ni ne modifie la présentation Marp en travaillant uniquement sur les exemples.
+10. Résume les fichiers concernés, les commandes exécutées, leurs résultats et les limites éventuelles.
 
 ## Règles
 
@@ -49,8 +50,8 @@ Utilise-la pour créer ou adapter des exercices PHP, des exemples de notions du 
 
 ## Vérification finale
 
-- Chaque notion demandée possède un sous-dossier avec un exemple PHP et son tutoriel associé, sauf convention existante documentée.
-- Chaque tutoriel explique concrètement les lignes ou blocs importants de son exemple et le chemin d'exécution jusqu'au résultat.
+- Chaque notion demandée possède un tutoriel distinct et un exemple PHP correspondant aux chemins définis par le README.
+- Chaque tutoriel est accessible à un débutant et contient définitions, rôle, syntaxe, explication de l'exemple, bonnes pratiques, erreurs fréquentes et exercice.
+- Chaque exemple est autonome et son résultat réel correspond aux instructions du tutoriel.
 - Les exemples respectent la version et les conventions constatées.
-- Le README parent référence les exemples, les tutoriels et les commandes valides.
 - Le statut des vérifications est rapporté sans exagération.
