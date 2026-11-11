@@ -1,66 +1,30 @@
-# PHP Lab Assignment
+# PHP Lab: Errors, Exceptions, Namespaces, and Traits
 
-## Besoin du projet technique
+## Project technical need
 
-Ce lab est nécessaire parce qu'un projet PHP réel doit être capable de gérer des situations imprévues, de conserver une organisation claire des classes et d'éviter la duplication du code sans perdre la lisibilité de l'architecture. Le dépôt observé ne contient pas encore d'application PHP fonctionnelle ni de fichiers Composer, donc le besoin est avant tout pédagogique : préparer le projet technique à intégrer ces mécanismes proprement lorsque l'application sera développée ou enrichie.
+This lab teaches three useful PHP ideas. They help a program show problems clearly, organize class names, and share code without false inheritance. This is a learning project. It does not define an application, a system design, a package, or a Composer setup.
 
-Le but est de renforcer la robustesse et la maintenabilité du projet technique. En pratique, cela permet :
+The examples work on their own. They are not part of an existing application. The integration notes give general ideas for a future project. These ideas must be checked first.
 
-- de détecter et de traiter les erreurs de données, d'entrées utilisateur ou de traitement sans arrêter brutalement l'ensemble du système ;
-- de structurer les classes par domaine ou par responsabilité afin d'éviter les conflits de noms et de faciliter le chargement des fichiers ;
-- de réutiliser des comportements communs sans multiplier les héritages inutiles.
+## Topics and skills to learn
 
-L'objectif n'est pas d'inventer une application spécifique dans ce dépôt, mais d'identifier le besoin technique qu'un vrai projet PHP rencontre et de préparer une base de solution fiable, exploitable et explicable.
+### Error and exception handling
 
-## Notions et techniques à apprendre
+Learn the difference between a code error and a problem that the program can report and handle. Use `throw` to raise an exception. Use `try` and `catch` to handle it. Use `finally` for work that must happen in both cases. Do not hide the real cause of a problem.
 
-### 1. Gestion des erreurs et des exceptions
+### Namespaces
 
-Il s'agit d'apprendre à distinguer les erreurs de programmation des situations métier ou d'exécution qui doivent être gérées explicitement. L'objectif est de maîtriser le mécanisme PHP fondamental suivant :
+Use `namespace` to group names. Use `use` to import a name. Use an alias when two classes have the same name. A namespace organizes names, but it does not load files. File loading depends on the real project setup.
 
-- lever une exception avec `throw` lorsqu'une condition invalide ou anormale est détectée ;
-- capturer cette exception avec `try` / `catch` à la frontière du traitement ;
-- utiliser `finally` lorsque la ressource ou l'état doit être nettoyé dans tous les cas ;
-- produire un message clair et exploitable pour le développeur ou l'utilisateur ;
-- choisir le bon niveau d'abstraction pour la gestion de l'erreur, sans masquer les causes réelles.
+### Traits
 
-Les notions à comprendre sont la différence entre une erreur PHP classique, une exception, et le bon placement de la surveillance de l'entrée, du traitement et de la sortie.
+Create shared code in a `trait`. Add it to a class with `use`. Learn when two classes share a small action. A trait is not a class and does not replace good inheritance.
 
-### 2. Namespaces
+## Expected work
 
-Les namespaces servent à organiser les classes et à éviter les collisions de noms entre composants du projet. L'objectif est de comprendre :
+Each topic has one beginner tutorial and one PHP example. Each tutorial explains the code, good practices, common mistakes, and an exercise. Names, commands, and results match across all files.
 
-- la nécessité de qualifier les classes selon leur domaine ou leur responsabilité ;
-- le rôle de `namespace` pour isoler les symboles ;
-- le rôle de `use` pour simplifier l'appel et la lecture du code ;
-- la relation avec le chargement automatique des classes (`autoload`) dans une architecture propre ;
-- la manière d'éviter les ambiguïtés quand plusieurs modules du projet utilisent des types portant le même nom.
-
-Cette notion doit être maîtrisée comme un outil d'organisation, de séparation et de lisibilité du code.
-
-### 3. Traits
-
-Les traits permettent de réutiliser des méthodes entre plusieurs classes sans créer un héritage artificiel. L'objectif est d'apprendre :
-
-- quand un comportement est réellement partagé entre plusieurs classes ;
-- comment définir une méthode commune dans un trait ;
-- comment utiliser le trait avec `use` dans une ou plusieurs classes ;
-- quand le trait est adapté (partage d'un comportement technique ou de validation) et quand il ne l'est pas (modélisation métier ou hiérarchie logique) ;
-- pourquoi il faut éviter d'abuser des traits pour masquer un mauvais design ou une architecture peu claire.
-
-Le but est de comprendre que le trait est un outil de réutilisation, pas une solution systématique pour tous les cas de duplication.
-
-## Réalisation attendue
-
-Le lab est pédagogique : le dépôt ne fournit pas d'application PHP à laquelle raccorder les démonstrations. Les exemples doivent donc rester autonomes. Toute proposition d'intégration doit être présentée comme une piste, jamais comme une description de l'architecture existante.
-
-### Livrables et organisation attendue
-
-Créer trois tutoriels indépendants, un par notion, ainsi que trois exemples PHP correspondants. Chaque tutoriel doit partir du niveau débutant et présenter les définitions, le rôle et l'intérêt de la notion, sa syntaxe, une explication pratique de l'exemple associé, les bonnes pratiques, les erreurs fréquentes et au moins un exercice à réaliser.
-
-Chaque fichier PHP doit être exécutable seul, lisible par un débutant et montrer le concept traité dans le tutoriel correspondant. Les deux livrables d'une même notion doivent employer les mêmes noms, données, commandes et résultats attendus.
-
-La structure attendue est :
+### Project files
 
 ```text
 lab-php/
@@ -78,17 +42,21 @@ lab-php/
     └── integration-notes.md
 ```
 
-Cette structure décrit les livrables attendus et ne signifie pas que ces fichiers existent déjà. Ne pas ajouter de dépendances, de framework, d'autoload ni de structure applicative non constatés dans le dépôt.
+### What each file does
 
-### Intégration dans le projet technique
+- `README.md`: explains the learning need, the three topics, the files, and how to check the examples.
+- `presentation.md`: a Marp slide deck in English. It uses the same topics and results as the examples.
+- `tutorials/01-error-exception-handling.md`: explains errors, exceptions, `throw`, `try`, `catch`, and `finally`. It uses example 01.
+- `tutorials/02-namespaces.md`: explains namespaces, `use`, aliases, and file loading. It uses example 02.
+- `tutorials/03-traits.md`: explains how to make and use traits and when not to use them. It uses example 03.
+- `examples/01-error-exception-handling.php`: checks input, catches an exception, and runs a `finally` block.
+- `examples/02-namespaces.php`: creates and uses classes in more than one namespace in one file.
+- `examples/03-traits.php`: shares one code formatter between two classes without inheritance.
+- `docs/integration-notes.md`: shows what is known, gives general ideas for future use, and records the checks that were run.
 
-Créer également `presentation.md`, une présentation pédagogique au format Marp, et `docs/integration-notes.md`, qui distingue les possibilités d'intégration des faits réellement présents dans le dépôt. La présentation, les tutoriels, les exemples et ce README doivent rester cohérents entre eux.
+### Run and check the examples
 
-Les tutoriels doivent expliquer les exemples sans les présenter comme du code applicatif déjà intégré. Les notes d'intégration peuvent recommander où ces notions seraient utiles dans un projet, mais doivent signaler explicitement que l'architecture réelle, les dépendances et l'autoload ne sont pas définis si aucun élément de preuve n'existe dans le dépôt.
-
-### Vérification et résultats à documenter
-
-Vérifier la version de PHP disponible avant de choisir la syntaxe ou d'indiquer une version. Depuis la racine du lab, vérifier la syntaxe puis exécuter chacun des exemples :
+From the `lab-php` folder, check and run each PHP file:
 
 ```bash
 php -l examples/01-error-exception-handling.php
@@ -99,8 +67,4 @@ php -l examples/03-traits.php
 php examples/03-traits.php
 ```
 
-Documenter dans `docs/integration-notes.md` la version effectivement observée, les commandes réellement exécutées et leurs résultats. Ne jamais annoncer une validation, une sortie, un outil, une dépendance ou une version qui n'a pas été vérifié(e). Si PHP n'est pas disponible, indiquer les commandes qui restent à exécuter sans prétendre que les exemples ont été validés.
-
-### Livrables attendus
-
-Les livrables finaux sont les trois tutoriels, les trois exemples PHP associés, la présentation Marp `presentation.md` et les notes `docs/integration-notes.md`. Des améliorations techniques pertinentes peuvent être proposées si elles restent pédagogiques, compatibles avec l'environnement observé et clairement séparées des faits du projet.
+The integration notes give the PHP version that was found, the commands that were run, and their results. Do not claim that something works with a project unless it was checked.

@@ -2,13 +2,13 @@
 trigger: always_on
 ---
 
-À la fin de chaque réponse finale, indiquer les skills réellement utilisées pour traiter la demande. Ne pas mentionner les skills simplement disponibles mais non utilisées.
+At the end of each final answer, name the skills used for the task. Do not name skills that were only available.
 
-## Préparation des livrables PHP Lab
+## PHP Lab files
 
-- Avant toute tâche sur ce lab, lire intégralement `README.md`, les règles pertinentes de `.agents/rules/` et le contenu complet de chaque Skill pertinente de `.agents/skills/`.
-- Respecter les trois sections principales imposées dans `README.md` : « Besoin du projet technique », « Notions et techniques à apprendre » et « Réalisation attendue ».
-- Garder les livrables séparés et cohérents : un tutoriel par notion sous `tutorials/`, un exemple PHP correspondant sous `examples/`, la présentation Marp dans `presentation.md` et les notes d'intégration dans `docs/integration-notes.md`.
-- Écrire les explications pour des débutants et maintenir une exactitude technique. Ne pas inventer l'application, son architecture, ses dépendances, sa version PHP, des résultats de vérification ou des cas vécus.
-- Vérifier la syntaxe PHP et exécuter chaque exemple lorsque l'interpréteur est disponible; documenter les commandes réellement lancées et leurs résultats. Ne jamais présenter une vérification non exécutée comme réussie.
-- Respecter les conventions déjà présentes et modifier uniquement les livrables demandés.
+- Before work on this lab, read all of `README.md`, useful rules in `.agents/rules/`, and all useful Skills in `.agents/skills/<name>/SKILL.md`. The current custom files are in `.agents/`.
+- Keep the three main parts in `README.md`: "Project technical need", "Topics and skills to learn", and "Expected work".
+- Use the exact file list in `README.md`: one tutorial in `tutorials/` for each topic, one matching PHP example in `examples/`, a Marp deck in `presentation.md`, and notes in `docs/integration-notes.md`. Do not add files or packages that are not needed.
+- Write for new learners. Be correct. Do not make up an app, its design, packages, PHP version, test results, or real events.
+- Check PHP syntax and run each example when PHP is ready. Write the found version, real commands, and results in `docs/integration-notes.md`. Never say a check passed if it did not run.
+- Follow the current project style. Change only the files needed for the request.
